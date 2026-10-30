@@ -1,0 +1,10 @@
+name: javazone-2027
+team: javazoneweb
+compute:
+  cpu: 256
+  memory: 512
+  port: 8080
+  health_check: /health
+routing:
+  host: 2027.javazone.no
+  priority: 200
