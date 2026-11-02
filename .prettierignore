@@ -1,3 +1,6 @@
 dist
 node_modules
 *.tsbuildinfo
+studio/dist
+studio/.sanity
+studio/schema.json
