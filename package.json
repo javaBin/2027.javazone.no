@@ -12,7 +12,9 @@
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "studio": "npm --prefix studio run dev",
+    "studio:deploy": "npm --prefix studio run deploy"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
