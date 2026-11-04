@@ -2,10 +2,12 @@
 
 Standalone Sanity Studio (project `kkcs9lf3`, dataset `production`). Lives in this repo for now; kept self-contained so it can be moved to its own repo later.
 
+**Hosted at https://javazone.sanity.studio** – deploy changes with `npm run deploy` (or `npm run studio:deploy` from the repo root).
+
 ```bash
 npm install          # inside studio/
 npm run dev          # http://localhost:3333  (or `npm run studio` from repo root)
-npm run deploy       # deploy to <hostname>.sanity.studio
+npm run deploy       # deploy to javazone.sanity.studio
 npm run typegen      # generate ../src/sanity.types.ts from schema + GROQ queries in ../src
 ```
 
