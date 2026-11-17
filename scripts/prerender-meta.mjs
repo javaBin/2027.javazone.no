@@ -41,8 +41,15 @@ function setOgUrl(html, pathname) {
   return html.replace(/<meta property="og:url" content="[^"]*"\s*\/>/, `<meta property="og:url" content="${SITE_URL}${pathname}"/>`)
 }
 
+// Unlisted pages (not linked from any menu) must stay out of search engines. nginx.conf also sends
+// an X-Robots-Tag header for them; robots.txt is deliberately not used, since it would publish the path.
+function setNoindex(html) {
+  return html.replace('</head>', '  <meta name="robots" content="noindex, nofollow"/>\n  </head>')
+}
+
 async function writePage(template, pathname, meta) {
-  const html = setOgUrl(applyMeta(template, meta), pathname)
+  let html = setOgUrl(applyMeta(template, meta), pathname)
+  if (meta.noindex) html = setNoindex(html)
   const dir = new URL(`.${pathname}/`, DIST_DIR)
   await mkdir(dir, { recursive: true })
   await writeFile(new URL('index.html', dir), html)
