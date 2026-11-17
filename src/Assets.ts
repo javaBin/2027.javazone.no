@@ -6,6 +6,7 @@ import jzHotTubs from '@/assets/journeyzone/hot-tubs.webp'
 import jzLangoustines from '@/assets/journeyzone/langoustines.webp'
 import jzLean from '@/assets/journeyzone/lean.webp'
 import jzLighthouseLadder from '@/assets/journeyzone/lighthouse-ladder.webp'
+import jzMap from '@/assets/journeyzone/map.svg'
 import jzSailboat from '@/assets/journeyzone/sailboat.webp'
 import jzSauna from '@/assets/journeyzone/sauna.webp'
 import jzSunset from '@/assets/journeyzone/sunset.webp'
@@ -33,4 +34,13 @@ const journeyzone = {
   lean: { src: jzLean, ...portrait, alt: 'A participant leaning into the wind above the sea' },
 } satisfies Record<string, Photo>
 
-export const Assets = { journeyzone }
+// Route map of the Skagerrak coast, drawn from OpenStreetMap coastline and Norway–Sweden border data.
+// Data © OpenStreetMap contributors, ODbL — the credit must stay visible wherever the map is shown.
+const journeyzoneMap = {
+  src: jzMap,
+  width: 800,
+  height: 897,
+  alt: 'Map of the Skagerrak coast with a dotted route from Väderöarna north to Ekenäs on Sydkoster, then fading out up the Oslofjord towards a question mark. Small sketches mark a sailboat on the way, a langoustine, diving goggles and a thermometer by Väderöarna, and a tipi and campfire by Koster',
+} satisfies Photo
+
+export const Assets = { journeyzone, journeyzoneMap }

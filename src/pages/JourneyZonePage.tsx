@@ -1,6 +1,7 @@
 import { Assets } from '@/Assets'
 import type { Topic } from '@/components'
 import { Container, PageHeader, PhotoRows, TopicRows } from '@/components'
+import RouteMap from '@/components/journeyzone/RouteMap'
 import pageMeta from '@/data/pageMeta.json'
 import { useOpenGraph } from '@/hooks/useOpenGraph'
 
@@ -10,14 +11,24 @@ const aboutTrip: Topic[] = [
     body: <p>Thursday evening 16 to Sunday 19 September 2027, right after the conference. We are back in Oslo on Sunday evening.</p>,
   },
   {
+    title: 'Where',
+    body: <RouteMap />,
+  },
+  {
     title: 'Who can join',
     body: (
-      <p>
-        All speakers of JavaZone are invited to apply, but the number of spots is limited. Speakers of full presentations and workshops get priority;
-        lightning talk speakers are welcome to apply. You need to be comfortable on a boat for a full day, in and on the water, and outdoors in
-        September weather. No extraordinary physical ability is required, but parts of the trip are fast and bumpy. If you have a bad back, this is
-        not the year for you. Let us know about any health conditions or allergies when you sign up.
-      </p>
+      <>
+        <p>
+          All speakers of JavaZone are invited to apply, but the number of spots is limited. Speakers of full presentations and workshops get
+          priority; lightning talk speakers are welcome to apply. You need to be comfortable on a boat for a full day, in and on the water, and
+          outdoors in September weather. No extraordinary physical ability is required, but parts of the trip are fast and bumpy. If you have a bad
+          back, this is not the year for you. Let us know about any health conditions or allergies when you sign up.
+        </p>
+        <p>
+          You must bring a valid passport and be allowed to legally enter Sweden and the Schengen area. If you need a visa, it is your responsibility
+          to have it in place before the trip.
+        </p>
+      </>
     ),
   },
   {
@@ -73,8 +84,9 @@ const JourneyZonePage = () => {
           are taking them back.
         </p>
         <p>
-          You will sail, not just sit on board. No previous sailing experience is needed, only the willingness to take part and learn. The detailed
-          program is a surprise and will depend on wind and weather.
+          This is not a cruise. You will haul ropes and trim sails, dive into cold, clear water, and fish your own dinner out of the open sea. No
+          experience is needed, only the willingness to get wet, get your hands dirty and learn. The program is a surprise, and wind and weather have
+          the final say.
         </p>
       </PageHeader>
       <Container>
