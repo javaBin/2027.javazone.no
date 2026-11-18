@@ -9,6 +9,7 @@ import Packages from '@/components/partners/Packages.tsx'
 import EditorialIntro from '@/components/sections/EditorialIntro.tsx'
 import IndexRows from '@/components/sections/IndexRows.tsx'
 import PageHeader from '@/components/sections/PageHeader.tsx'
+import PhotoRows from '@/components/sections/PhotoRows.tsx'
 import QuietGrid from '@/components/sections/QuietGrid.tsx'
 import Section from '@/components/sections/Section.tsx'
 import SplitLayout from '@/components/sections/SplitLayout.tsx'
@@ -26,11 +27,13 @@ export {
   LinkButton,
   Packages,
   PageHeader,
+  PhotoRows,
   QuietGrid,
   Section,
   SplitLayout,
   TopicRows,
 }
 export type { IndexRow } from '@/components/sections/IndexRows.tsx'
+export type { Photo } from '@/components/sections/PhotoRows.tsx'
 export type { QuietGridItem } from '@/components/sections/QuietGrid.tsx'
 export type { Topic } from '@/components/sections/TopicRows.tsx'

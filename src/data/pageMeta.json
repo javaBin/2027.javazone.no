@@ -19,6 +19,12 @@
     "title": "Info | JavaZone 2027",
     "description": "Everything you need to know about JavaZone 2027 — venue, workshops, food, tickets, and AweZone."
   },
+  "journeyzone": {
+    "path": "/journeyzone",
+    "title": "JourneyZone | JavaZone 2027",
+    "description": "JourneyZone 2027 — a sailing trip for JavaZone speakers through the Skagerrak archipelago, 16–19 September 2027, right after the conference.",
+    "noindex": true
+  },
   "partner": {
     "path": "/partner",
     "title": "Partner with Us | JavaZone 2027",
