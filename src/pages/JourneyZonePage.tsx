@@ -61,6 +61,54 @@ const packing: Topic[] = [
   },
 ]
 
+const kh = Assets.klapphagen
+
+const food: Topic[] = [
+  {
+    title: 'Food over fire',
+    body: (
+      <>
+        <p>
+          On Koster we stay at Kläpphagen, a farm from 1861 that is now a small island hotel with its own restaurant, bar and brewery. Every morning
+          they light the fire in the kitchen, and almost everything that leaves it has been close to the flames. Typical of the kitchen are whole
+          lobster and langoustines from the Koster sea, crab roasted on the embers, mussels pulled straight out of the fire, bone marrow, or an ox rib
+          glazed with honey from North Koster.
+        </p>
+        <p>
+          The menu follows the season and the catch, so what ends up on the plate when we are there is up to the kitchen. We can promise it is worth
+          getting wet for.
+        </p>
+      </>
+    ),
+  },
+]
+
+const foodGallery = [
+  [kh.firesideTable],
+  [kh.lobsterPlate, kh.crabGrill, kh.embersSkewer],
+  [kh.boneMarrow, kh.musselsFire],
+  [kh.lobsterFire, kh.fireGrill, kh.grateFire],
+  [kh.flatfish, kh.fishStone],
+]
+
+const stay: Topic[] = [
+  {
+    title: 'Evenings',
+    body: (
+      <p>
+        When the kitchen fire burns down, the bar takes over: candles in the windows, a stove in the corner and a beer from their own brewery. Bed is
+        a few steps away, in suites with floral wallpaper and chandeliers or in canvas tents in the garden.
+      </p>
+    ),
+  },
+]
+
+const stayGallery = [
+  [kh.barBokeh, kh.candles, kh.barLights],
+  [kh.restaurant, kh.wineService, kh.waiter],
+  [kh.suite, kh.greenChairs, kh.espressoMartini],
+]
+
 const photos = Assets.journeyzone
 
 const gallery = [
@@ -101,6 +149,21 @@ const JourneyZonePage = () => {
       </Container>
       <Container className="pt-16 pb-24 md:pt-20 lg:pt-28 lg:pb-32">
         <TopicRows topics={aboutTrip} />
+        <div className="mt-24 lg:mt-32">
+          <TopicRows topics={food} />
+          <div className="mt-10 md:mt-12">
+            <PhotoRows rows={foodGallery} />
+          </div>
+        </div>
+        <div className="mt-24 lg:mt-32">
+          <TopicRows topics={stay} />
+          <div className="mt-10 md:mt-12">
+            <PhotoRows rows={stayGallery} />
+          </div>
+          <p className="m-0 mt-3 text-sm text-subtle">
+            Photos © <a href="https://www.klapphagen.se/en/">Kläpphagen Koster</a>
+          </p>
+        </div>
         <h2 className="m-0 mt-24 mb-6 eyebrow lg:mt-32">On the islands</h2>
         <PhotoRows rows={gallery} />
         <div className="mt-24 lg:mt-32">
