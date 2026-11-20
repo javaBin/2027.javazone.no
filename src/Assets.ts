@@ -40,7 +40,7 @@ const journeyzoneMap = {
   src: jzMap,
   width: 800,
   height: 897,
-  alt: 'Map of the Skagerrak coast with a dotted route from Väderöarna north to Ekenäs on Sydkoster, then fading out up the Oslofjord towards a question mark. Small sketches mark a sailboat on the way, a langoustine, diving goggles and a thermometer by Väderöarna, and a tipi and campfire by Koster',
+  alt: 'Map of the Skagerrak coast with a dotted route from Väderöarna north to Ekenäs on Sydkoster, then fading out up the Oslofjord towards a question mark. Small sketches mark a langoustine, diving goggles and a thermometer by Väderöarna, and a tipi and campfire by Koster',
 } satisfies Photo
 
 export const Assets = { journeyzone, journeyzoneMap }

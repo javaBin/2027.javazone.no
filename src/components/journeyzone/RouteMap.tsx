@@ -1,4 +1,7 @@
+import { useRef } from 'react'
+
 import { Assets } from '@/Assets'
+import SailingBoat from '@/components/journeyzone/SailingBoat'
 
 const map = Assets.journeyzoneMap
 
@@ -20,10 +23,13 @@ const regions = [
 // Stylised line map with no background: coastlines, border and route dots are in the SVG;
 // labels are HTML on top so they use the site font and stay sharp at any size.
 const RouteMap = () => {
+  const mapRef = useRef<HTMLDivElement>(null)
+
   return (
     <figure className="m-0">
-      <div className="relative">
+      <div ref={mapRef} className="relative">
         <img src={map.src} alt={map.alt} width={map.width} height={map.height} loading="lazy" decoding="async" className="block w-full h-auto" />
+        <SailingBoat track={mapRef} />
         {regions.map((region) => (
           <span
             key={region.name}
